@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: hsl(0, 0%, 98%);
+}
+
+h1,
+h2 {
+    margin-top: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background: hsl(233, 26%, 24%);
+    height: 70px;
+    padding: 1.5em;
+    margin-bottom: 1em;
+    color: #ffffff;
+    text-align: center;
+}
+
+.input {
+    height: 100%;
+    text-align: center;
+}
+
+input {
+    padding: 10px 30px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid lightgray;
+}
+
+.search-icon {
+    position: relative;
+    top: 3px;
+    right: 280px;
+    color: hsl(233, 26%, 24%);
+    font-size: 20px;
+    align-self: flex-start;
+}
+
+.list {
+    margin-top: 2em;
+    background: hsl(233, 26%, 24%);
+    border-radius: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    color: #ffffff;
+    padding: .5em;
+}
+
+.lists {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5em;
+    padding-bottom: 2em;
+}
+
+.phone-icon {
+    font-size: 2rem;
+}
+
+@media(max-width:375px) {
+    .lists {
+        grid-template-columns: repeat(1, 1fr);
+        gap: .5em;
+    }
+    li {
+        text-align: left;
+    }
+    .search-icon {
+        top: -30px;
+        right: 125px;
+    }
+}
