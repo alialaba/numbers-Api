@@ -43,32 +43,17 @@ const displayNumber = (output) => {
 
 }
 
-// const search = document.getElementById('search')
-// const searchName = async searchText => {
-//     const response = await fetch('https://emajency.com/js/numbers.json')
-//     const names = await response.json();
-//     let matches = names.filter(nam => {
-//         const regex = new RegExp(`^${searchText}`, 'gi');
-//         return nam.name.match(regex);
-//     })
-//     if (searchText.length === 0) {
-//         matches = [];
-//     }
-//     displayNumber(matches)
+const searchName = () => {
+    const searchInput = document.getElementById('search');
+    const listItem = document.querySelector('.lists');
+    // console.log(listItem);
 
-// }
-// search.addEventListener('input', () => searchName(search.value));
-
-
-const searchInput = document.getElementById('search');
-const listItem = document.querySelector('.lists');
-// console.log(listItem);
-
-searchInput.addEventListener('keyup', (event) => {
-    // console.log(event)
-    const match = event.target.value;
-    listItem.forEach((el) => {
-        el.querySelector('li').textContent.toLowerCase().startsWith(match) ?
-            null : listItem.getElementsByClassName.display = "none";
+    searchInput.addEventListener('keyup', (event) => {
+        // console.log(event)
+        const searchLetter = event.target.value.toLowerCase()
+        listItem.forEach((el) => {
+            el.querySelector('li').textContent.toLowerCase().startsWith(searchLetter) ?
+                el.style.display = "" : el.style.display = "none";
+        })
     })
-})
+}
